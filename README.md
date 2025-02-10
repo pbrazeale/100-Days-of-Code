@@ -7,4 +7,6 @@ This respository contains the 100 projects as found in '100 Days of Code: The Co
 
 This was a simple introduction to `print`, `input`, and variables. I learned I could nest inputs directly into a desired print function which was neat, and I look forward to expanding upon my CS50P course.
 
-## Day 002
+## Day 002 Tip Calculator
+
+When Subscripting you can use negative numbers to index a string backwards.
