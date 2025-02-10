@@ -11,6 +11,6 @@ This was a simple introduction to `print`, `input`, and variables. I learned I c
 
 When Subscripting you can use negative numbers to index a string backwards.
 
-## Day 003 Python Pizza
+## Day 003 Treasure Island
 
 Easy enough. Looking forward to days 16+ after the downloaded material *which I skipped*. Not a fan of forced IDE and interface downloads.
