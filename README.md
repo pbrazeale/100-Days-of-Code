@@ -10,3 +10,5 @@ This was a simple introduction to `print`, `input`, and variables. I learned I c
 ## Day 002 Tip Calculator
 
 When Subscripting you can use negative numbers to index a string backwards.
+
+## Day 003 
