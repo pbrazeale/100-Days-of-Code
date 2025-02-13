@@ -38,3 +38,6 @@ Solved this problem, [reeborg.ca](https://reeborg.ca/reeborg.html?lang=en&mode=p
 
 Easy, but I didn't consider the edge case of the square void starting position;
 however the solution was easy enough [GitHub code](https://github.com/pbrazeale/100-Days-of-Code/blob/main/Day_006_Maze/maze.py)
+
+### Day 007 Hangman
+Knew I needed a holding list, tried turning the display into a list, but that approach failed. The solution to use a holding list of guessed letters, seems so obvious after the fact. Didn't download the starter software, so no word list file, and no hangman ascii art, but otherwise I think I demonstrated the core concepts well.
