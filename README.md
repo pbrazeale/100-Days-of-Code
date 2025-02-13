@@ -32,3 +32,9 @@ Super easy. Coded it up with zero errors. Learned about `random.choice` which wi
 A CLI for generating passwords.
 
 I took the lesson and expanded upon it. My generator now requires a band of 12 to 20 characters, and then randomly generates the characters using a mix of letters, numbers, and symbols.  
+
+### Day 006 Maze
+Solved this problem, [reeborg.ca](https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Maze&url=worlds%2Ftutorial_en%2Fmaze1.json) using basic python functions to navigate maze using the follow right path method.
+
+Easy, but I didn't consider the edge case of the square void starting position;
+however the solution was easy enough [GitHub code](https://github.com/pbrazeale/100-Days-of-Code/blob/main/Day_006_Maze/maze.py)
