@@ -41,3 +41,6 @@ however the solution was easy enough [GitHub code](https://github.com/pbrazeale/
 
 ### Day 007 Hangman
 Knew I needed a holding list, tried turning the display into a list, but that approach failed. The solution to use a holding list of guessed letters, seems so obvious after the fact. Didn't download the starter software, so no word list file, and no hangman ascii art, but otherwise I think I demonstrated the core concepts well.
+
+### Day 008 Caesar Cipher
+Easy enough, though my approach was not nearly as elegant. I ended up creating a second list, which obviously wasted memory space, and would fail if I were trying to shift a much larger data list. Regardless, I am pleased to have thought through a solution on my own and solved it.
