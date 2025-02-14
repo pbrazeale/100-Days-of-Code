@@ -1,4 +1,5 @@
 def format_name(f_name, l_name):
+    """This is a docstring to leave function notes"""
     if f_name == "" or l_name == "":
         return "You did not enter a first and/or last name"
     formatted_f_name = f_name.title()

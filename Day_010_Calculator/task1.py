@@ -1,6 +1,7 @@
 print("Welcome to your calculator")
 
 number1 = int(0)
+
 def calculate():
     global number1
     while True:
