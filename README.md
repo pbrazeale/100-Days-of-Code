@@ -47,3 +47,8 @@ Easy enough, though my approach was not nearly as elegant. I ended up creating a
 
 ### Day 009 Secret Auction
 Nothing to it. Simple use of nested list within a dictionary and increment the key by 1 each time. Similar to a SQL table with a UNIQUE PRIMARY KEY. Crate an infinite while loop and only break when auction is complete. Took 10 minutes or less, and zero need for the final video.
+
+### Day 010 Calculator
+Built a simplistic CLI calculator.
+
+My solution used an if logic chain instead of creating a dictionary of operations. (task1) The dictionary solution version offers the ability to expand the calculator's functionality in the future, and thus is a far more elegant solution that my own. I too chose recursion as the simplest solution to maintain the first calculation moving forward until the user choses to clear and start over.
