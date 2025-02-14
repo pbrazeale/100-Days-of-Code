@@ -44,3 +44,6 @@ Knew I needed a holding list, tried turning the display into a list, but that ap
 
 ### Day 008 Caesar Cipher
 Easy enough, though my approach was not nearly as elegant. I ended up creating a second list, which obviously wasted memory space, and would fail if I were trying to shift a much larger data list. Regardless, I am pleased to have thought through a solution on my own and solved it.
+
+### Day 009 Secret Auction
+Nothing to it. Simple use of nested list within a dictionary and increment the key by 1 each time. Similar to a SQL table with a UNIQUE PRIMARY KEY. Crate an infinite while loop and only break when auction is complete. Took 10 minutes or less, and zero need for the final video.
