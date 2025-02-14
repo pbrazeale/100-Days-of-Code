@@ -52,3 +52,8 @@ Nothing to it. Simple use of nested list within a dictionary and increment the k
 Built a simplistic CLI calculator.
 
 My solution used an if logic chain instead of creating a dictionary of operations. (task1) The dictionary solution version offers the ability to expand the calculator's functionality in the future, and thus is a far more elegant solution that my own. I too chose recursion as the simplest solution to maintain the first calculation moving forward until the user choses to clear and start over.
+
+### Day 011 Blackjack
+Built CLI blackjack game.
+
+Watched the first video "intro", and built the game. Not sure if it's optimal, but I used `random` to shuffle my deck list and then delt by indexing into the deck. It's a total of 101 lines of code, which seems suboptimal, but I was able to build it in about an hour, so that was fun. Ran into the odd syntax error, and had to add in conditional check for dealer having 21 before entering the "hit()" phase of the game for the player, but otherwise everything worked as planned.
