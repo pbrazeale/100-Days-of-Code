@@ -18,8 +18,8 @@ def guessing(difficulty):
     else:
         lives = 10
     
-    # target_number = number_generation()
-    target_number = 23
+    target_number = number_generation()
+    # target_number = 23
 
     player_won = False
     
