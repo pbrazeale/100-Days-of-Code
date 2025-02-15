@@ -1,12 +1,13 @@
+from art import *
 import random
 
 cards = [
-    "A", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K",
-    "A", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K",
-    "A", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K",
-    "A", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
+    "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K",
+    "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K",
+    "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K",
+    "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
 ]
-count = {"A": 11, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "J": 10, "Q": 10, "K": 10,}
+count = {"A": 11, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "J": 10, "Q": 10, "K": 10,}
 
 players_cards = []
 dealers_cards = []
@@ -71,10 +72,16 @@ def hit():
     else:
         player_score()
 
+def logo():
+    cards = text2art("AJ", "cards")
+    title = text2art("Blackjack", "doom")
+    print(f"{cards} {title}")
+
 def play():
     global players_cards, dealers_cards, player_total, dealer_total, cards
     player_total = 0
     dealer_total = 0
+    logo()
     deal = input("Do you wnat to play blackjack? Type 'y' or 'n': ").lower()
     if deal == "y":
         random.shuffle(cards)
