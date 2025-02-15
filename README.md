@@ -58,8 +58,11 @@ Built CLI blackjack game.
 
 Watched the first video "intro", and built the game. Not sure if it's optimal, but I used `random` to shuffle my deck list and then delt by indexing into the deck. It's a total of 101 lines of code, which seems suboptimal, but I was able to build it in about an hour, so that was fun. Ran into the odd syntax error, and had to add in conditional check for dealer having 21 before entering the "hit()" phase of the game for the player, but otherwise everything worked as planned.
 
-#### Day 012
+### Day 012
 Built a CLI number guessing game.
 https://github.com/pbrazeale/100-Days-of-Code/blob/main/Day_012_Number_Guessing_Game/task1.py
 
-Watched the first video, and built the game in ~30 minutes. ~5 minutes for working prototype and 25 testing edge cases and refactoring.
+Watched the first video, and built the game in ~30 minutes. ~10 minutes for working prototype and ~20 testing edge cases and refactoring.
+
+### Day 013
+Fixed buggy code. Super simple.
