@@ -58,11 +58,15 @@ Built CLI blackjack game.
 
 Watched the first video "intro", and built the game. Not sure if it's optimal, but I used `random` to shuffle my deck list and then delt by indexing into the deck. It's a total of 101 lines of code, which seems suboptimal, but I was able to build it in about an hour, so that was fun. Ran into the odd syntax error, and had to add in conditional check for dealer having 21 before entering the "hit()" phase of the game for the player, but otherwise everything worked as planned.
 
-### Day 012
+### Day 012 Number Guessing Game
 Built a CLI number guessing game.
 https://github.com/pbrazeale/100-Days-of-Code/blob/main/Day_012_Number_Guessing_Game/task1.py
-
 Watched the first video, and built the game in ~30 minutes. ~10 minutes for working prototype and ~20 testing edge cases and refactoring.
 
-### Day 013
+### Day 013 Debugging
 Fixed buggy code. Super simple.
+
+### Day 014 Higher or Lower Game
+Built a CLI game comparing Instagram followers.
+
+Built the prototype using a dictionary, for real world use, I'd import a dictionary fil with more data. I used the key as their followers, and the value as a string description of the person. Ran into a bug where I created an infinite while loop despite making a play bool function which I switched to False upon completion; refactored into if logic chain. If I had the data, I'd change my selection to use random len(list), and then pair my follower value to == `data[x]["follower_count"]` to grab my int.
