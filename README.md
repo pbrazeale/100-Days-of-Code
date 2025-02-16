@@ -75,3 +75,12 @@ Built the prototype using a dictionary, for real world use, I'd import a diction
 Built CLI coffee machine logic.
 
 Managed to build everything but the "off" function without watching the solution. When she went over that requirement, I `import sys` and added a `sys.exit()` call for an "off" request. This was far more engaging than the fist chunk of problems, and I'm finally excited to keep going.
+
+### Day 016 OOP Coffee Machine
+Built a CLI coffee machine using OOP.
+
+This was far more fun than the previous version. I learned a lot from the lecture and was able to make a working version by reading the documentation. Overall this felt more akin to what I've seen professional software developers demonstrate as their daily duties. (*Though be it, quite simplified. It's easy to solve a completely known problem space.*)
+
+1. Had to switch my if statements to check for resources first, instead of payment first.
+2. Deleted my else print statements because the objects handle those themselves.
+3. Refactored code to make it cleaner.
