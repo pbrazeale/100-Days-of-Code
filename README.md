@@ -70,3 +70,8 @@ Fixed buggy code. Super simple.
 Built a CLI game comparing Instagram followers.
 
 Built the prototype using a dictionary, for real world use, I'd import a dictionary fil with more data. I used the key as their followers, and the value as a string description of the person. Ran into a bug where I created an infinite while loop despite making a play bool function which I switched to False upon completion; refactored into if logic chain. If I had the data, I'd change my selection to use random len(list), and then pair my follower value to == `data[x]["follower_count"]` to grab my int.
+
+### Day 015 Coffee Machine
+Built CLI coffee machine logic.
+
+Managed to build everything but the "off" function without watching the solution. When she went over that requirement, I `import sys` and added a `sys.exit()` call for an "off" request. This was far more engaging than the fist chunk of problems, and I'm finally excited to keep going.
