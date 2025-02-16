@@ -18,23 +18,17 @@ def requesting():
     elif request == "off":
         sys.exit()
     else:
-        drink = menu.find_drink(request)
-        return drink
+        return menu.find_drink(request)
     
 
 def main():
     global coffee_maker, money_machine
     drink = requesting()
 
-    if money_machine.make_payment(drink.cost) == True:
-        if coffee_maker.is_resource_sufficient(drink):
+    if coffee_maker.is_resource_sufficient(drink):
+        if money_machine.make_payment(drink.cost):
             coffee_maker.make_coffee(drink)
-        else:
-            print(f"Insufecent resources")
-    else:
-        print(f"Insufecent funds")
 
-
-
+ 
 if __name__ == "__main__":
     main()
