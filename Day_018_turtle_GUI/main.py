@@ -1,11 +1,21 @@
 from turtle import Turtle, Screen
 
-timmy_the_turtle = Turtle()
-timmy_the_turtle.shape("turtle")
-timmy_the_turtle.color("blue3")
-timmy_the_turtle.forward(100)
-timmy_the_turtle.right(90)
-timmy_the_turtle.forward(50)
+
+def draw_square(num):
+    # i = 4
+    # while i > 0:
+    #     timmy.forward(num)
+    #     timmy.right(90)
+    #     i -= 1
+    for _ in range(4):
+        timmy.forward(num)
+        timmy.right(90)
+
+
+timmy = Turtle()
+timmy.shape("turtle")
+timmy.color("blue3")
+draw_square(100)
 
 screen = Screen()
 screen.exitonclick()
