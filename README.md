@@ -84,3 +84,10 @@ This was far more fun than the previous version. I learned a lot from the lectur
 1. Had to switch my if statements to check for resources first, instead of payment first.
 2. Deleted my else print statements because the objects handle those themselves.
 3. Refactored code to make it cleaner.
+
+### Day 017 Quiz Game
+Built a CLI Quiz Game.
+
+Using OOP I created 5 modules. Main, 2 classes: Question, QuizBrain, data, and data2. Using: https://opentdb.com/api_config.php API, I manually downloaded a JSON data structure, cleaned it up and plugged into into the program to update the question_bank.
+
+Overall this was an enjoyable project, and I feel it solidified the OOP concepts covered in the previous lesson.
