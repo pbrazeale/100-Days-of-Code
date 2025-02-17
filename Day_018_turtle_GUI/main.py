@@ -12,10 +12,20 @@ def draw_square(num):
         timmy.right(90)
 
 
+def draw_dash_line(name, num):
+    line = round(num / 20)
+    for _ in range(int(num / (line * 2))):
+        name.forward(line)
+        name.penup()
+        name.forward(line)
+        name.pendown()
+
+
 timmy = Turtle()
 timmy.shape("turtle")
 timmy.color("blue3")
-draw_square(100)
+# draw_square(100)
+draw_dash_line(timmy, 100)
 
 screen = Screen()
 screen.exitonclick()
