@@ -91,3 +91,8 @@ Built a CLI Quiz Game.
 Using OOP I created 5 modules. Main, 2 classes: Question, QuizBrain, data, and data2. Using: https://opentdb.com/api_config.php API, I manually downloaded a JSON data structure, cleaned it up and plugged into into the program to update the question_bank.
 
 Overall this was an enjoyable project, and I feel it solidified the OOP concepts covered in the previous lesson.
+
+### Day 018 Turtle GUI
+Created a popup that painted a Hirst style dot painting.
+
+Watched the lecture up to the point that Dr. Yu introduced the Colorgram module and then I ran with it, reading the documentation and figuring out how to convert Colorgram object into a needed tuple for Turtle. Created a painting function and extrapolated out the row function from the columns. All-in-all it was a fun project with only minor bugs to fix. Maybe took ~45 minutes to read and code up?
