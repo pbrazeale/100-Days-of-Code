@@ -1,15 +1,52 @@
 from turtle import Turtle, Screen
 
 
+def draw_triangle(name, num):
+    for _ in range(3):
+        name.forward(num)
+        name.right(120)
+
+
 def draw_square(name, num):
-    # i = 4
-    # while i > 0:
-    #     timmy.forward(num)
-    #     timmy.right(90)
-    #     i -= 1
     for _ in range(4):
         name.forward(num)
         name.right(90)
+
+
+def draw_pentagon(name, num):
+    for _ in range(5):
+        name.forward(num)
+        name.right((72))
+
+
+def draw_hexagon(name, num):
+    for _ in range(6):
+        name.forward(num)
+        name.right((60))
+
+
+def draw_heptagon(name, num):
+    for _ in range(7):
+        name.forward(num)
+        name.right((51.4285))
+
+
+def draw_octagon(name, num):
+    for _ in range(8):
+        name.forward(num)
+        name.right((45))
+
+
+def draw_nonagon(name, num):
+    for _ in range(9):
+        name.forward(num)
+        name.right((40))
+
+
+def draw_decagon(name, num):
+    for _ in range(10):
+        name.forward(num)
+        name.right((36))
 
 
 def draw_dash_line(name, num):
@@ -25,7 +62,16 @@ timmy = Turtle()
 timmy.shape("turtle")
 timmy.color("blue3")
 # draw_square(name, 100)
-draw_dash_line(timmy, 100)
+# draw_dash_line(timmy, 100)
+
+draw_triangle(timmy, 100)
+draw_square(timmy, 100)
+draw_pentagon(timmy, 100)
+draw_hexagon(timmy, 100)
+draw_heptagon(timmy, 100)
+draw_octagon(timmy, 100)
+draw_nonagon(timmy, 100)
+draw_decagon(timmy, 100)
 
 screen = Screen()
 screen.exitonclick()
