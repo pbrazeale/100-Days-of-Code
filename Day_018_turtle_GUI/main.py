@@ -58,20 +58,31 @@ def draw_dash_line(name, num):
         name.pendown()
 
 
+def draw_shape(name, num_sides, num_forward):
+    angle = 360 / num_sides
+    for _ in range(num_sides):
+        name.forward(num_forward)
+        name.right(angle)
+
+
 timmy = Turtle()
 timmy.shape("turtle")
 timmy.color("blue3")
 # draw_square(name, 100)
 # draw_dash_line(timmy, 100)
 
-draw_triangle(timmy, 100)
-draw_square(timmy, 100)
-draw_pentagon(timmy, 100)
-draw_hexagon(timmy, 100)
-draw_heptagon(timmy, 100)
-draw_octagon(timmy, 100)
-draw_nonagon(timmy, 100)
-draw_decagon(timmy, 100)
+# draw_triangle(timmy, 100)
+# draw_square(timmy, 100)
+# draw_pentagon(timmy, 100)
+# draw_hexagon(timmy, 100)
+# draw_heptagon(timmy, 100)
+# draw_octagon(timmy, 100)
+# draw_nonagon(timmy, 100)
+# draw_decagon(timmy, 100)
+
+# such a clean solution!
+for _ in range(3, 11):
+    draw_shape(timmy, _, 100)
 
 screen = Screen()
 screen.exitonclick()
