@@ -49,7 +49,7 @@ timmy.speed(0)
 #     timmy.color(random_color())
 #     draw_random_walk(timmy, 20)
 
-draw_spirograph(timmy, 30, 100)
+draw_spirograph(timmy, 60, 100)
 
 screen = T.Screen()
 screen.exitonclick()
