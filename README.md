@@ -96,3 +96,13 @@ Overall this was an enjoyable project, and I feel it solidified the OOP concepts
 Created a popup that painted a Hirst style dot painting.
 
 Watched the lecture up to the point that Dr. Yu introduced the Colorgram module and then I ran with it, reading the documentation and figuring out how to convert Colorgram object into a needed tuple for Turtle. Created a painting function and extrapolated out the row function from the columns. All-in-all it was a fun project with only minor bugs to fix. Maybe took ~45 minutes to read and code up?
+
+### Day 019 Turtle Race
+Fun lesson.
+
+My new strategy is to see the objective in the lesson, and them attempt to solve it entirely on my own. Then when I hit a dead end I can watch the lecture further or use ChatGPT; which I found a way to make it a tutor instead of an answer generator.
+
+I wrote two journals:
+https://pbrazeale.github.io/ChatGPT-Technical-Tutor/
+
+https://github.com/pbrazeale/100-Days-of-Code/blob/main/Day_019_turtle_race/turtle_race/ChatGPT.md
