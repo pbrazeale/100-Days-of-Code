@@ -1,7 +1,16 @@
-from turtle import Turtle, Screen
+import turtle as T
+
+# from turtle import Turtle, Screen
 import random
 
-colors = ["blue3", "red", "black", "green", "purple"]
+T.colormode(255)
+
+
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    return (r, g, b)
 
 
 def draw_shape(name, num_sides, num_forward):
@@ -17,7 +26,7 @@ def draw_random_walk(name, num_forward):
     name.forward(num_forward)
 
 
-timmy = Turtle()
+timmy = T.Turtle()
 timmy.shape("turtle")
 timmy.color("blue3")
 timmy.pensize(10)
@@ -29,8 +38,8 @@ timmy.speed(0)
 #     draw_shape(timmy, _, 100)
 
 for _ in range(30):
-    timmy.color(random.choice(colors))
+    timmy.color(random_color())
     draw_random_walk(timmy, 20)
 
-screen = Screen()
+screen = T.Screen()
 screen.exitonclick()
