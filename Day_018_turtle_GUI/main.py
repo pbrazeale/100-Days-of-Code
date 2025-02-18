@@ -1,15 +1,15 @@
 from turtle import Turtle, Screen
 
 
-def draw_square(num):
+def draw_square(name, num):
     # i = 4
     # while i > 0:
     #     timmy.forward(num)
     #     timmy.right(90)
     #     i -= 1
     for _ in range(4):
-        timmy.forward(num)
-        timmy.right(90)
+        name.forward(num)
+        name.right(90)
 
 
 def draw_dash_line(name, num):
@@ -24,7 +24,7 @@ def draw_dash_line(name, num):
 timmy = Turtle()
 timmy.shape("turtle")
 timmy.color("blue3")
-# draw_square(100)
+# draw_square(name, 100)
 draw_dash_line(timmy, 100)
 
 screen = Screen()
