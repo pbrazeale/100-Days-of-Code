@@ -26,10 +26,18 @@ def draw_random_walk(name, num_forward):
     name.forward(num_forward)
 
 
+def draw_spirograph(name, circles, radius):
+    angle = 360 / circles
+    for _ in range(circles + 1):
+        name.color(random_color())
+        name.circle(radius)
+        name.right(angle)
+
+
 timmy = T.Turtle()
 timmy.shape("turtle")
 timmy.color("blue3")
-timmy.pensize(10)
+timmy.pensize(3)
 timmy.speed(0)
 
 # such a clean solution!
@@ -37,9 +45,11 @@ timmy.speed(0)
 #     timmy.color(random.choice(colors))
 #     draw_shape(timmy, _, 100)
 
-for _ in range(30):
-    timmy.color(random_color())
-    draw_random_walk(timmy, 20)
+# for _ in range(30):
+#     timmy.color(random_color())
+#     draw_random_walk(timmy, 20)
+
+draw_spirograph(timmy, 30, 100)
 
 screen = T.Screen()
 screen.exitonclick()
