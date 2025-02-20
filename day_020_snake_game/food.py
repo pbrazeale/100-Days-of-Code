@@ -13,6 +13,6 @@ class Food(Turtle):
         self.plop()
 
     def plop(self):
-        random_x = random.randint(-28, 28) * 10
-        random_y = random.randint(-28, 28) * 10
+        random_x = random.randint(-27, 24) * 10
+        random_y = random.randint(-27, 27) * 10
         self.goto(random_x, random_y)
