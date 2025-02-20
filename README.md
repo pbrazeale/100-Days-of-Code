@@ -106,3 +106,14 @@ I wrote two journals:
 https://pbrazeale.github.io/ChatGPT-Technical-Tutor/
 
 https://github.com/pbrazeale/100-Days-of-Code/blob/main/Day_019_turtle_race/turtle_race/ChatGPT.md
+
+### Day 020 & 021 Snake Game
+A true classic that was fun to build.
+
+Adjusted the food class. Named my method `plop()` and when selecting randint, I chose `(-28, 28) * 10` to make the food align better with the snake.
+
+Built snake method `grow()` on my own ahead of the lecture. By day 021 I understood the assignment and with the introduction of Super Classes I was off an running.
+
+Built class Scoreboard on my own, and then refactored according to the lesson to use CONSTANTS, and separated my score() to extrapolate out the update_scoreboard() method and keep the logic seperated. *Still need to read Clean Code*
+
+Followed the instructions to change my `grow()` method.
