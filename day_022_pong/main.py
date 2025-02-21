@@ -26,5 +26,6 @@ while game_is_on:
     screen.update()
     ball.move()
 
-# test
+# testing folder move
+
 screen.exitonclick()
