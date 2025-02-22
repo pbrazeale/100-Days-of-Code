@@ -118,7 +118,7 @@ Built class Scoreboard on my own, and then refactored according to the lesson to
 
 Followed the instructions to change my `grow()` method.
 
-### Day 023 Pong
+### Day 022 Pong
 A fun project, but for some reason my turtle module is glitched, and no matter what I've done I can't get the ball to bounce from the top. It double bounces and continues out of bounds.
 1. Adjusted upper boundary point
 2. Doublechecked code to match lesson
