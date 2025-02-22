@@ -4,8 +4,6 @@ from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
 
-CARS = 0
-
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
@@ -23,10 +21,7 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
 
-    if CARS < 20:
-        car_manager.create_car()
-        CARS += 1
-
+    car_manager.create_car()
     car_manager.move()
 
 
