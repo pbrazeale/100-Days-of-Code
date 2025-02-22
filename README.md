@@ -140,4 +140,6 @@ Needed Hints:
 	- Updated stretch to 2
 	- Updated randint range -250, 250
 		- I was trying to make CarManager a Turtle, but it's the car that needs to be a Turtle(). 
-
+	- random_chance insdie CarManager
+		- Need to solidify the idea that methods go within the class and functions are strictly for the game function itself. IE call class and update screen.
+        
