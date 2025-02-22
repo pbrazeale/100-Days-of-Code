@@ -16,10 +16,11 @@ class CarManager:
         car.color(random.choice(COLORS))
         car.penup()
         car.left(180)
-        car.shapesize(stretch_wid=2, stretch_len=1)
+        car.shapesize(stretch_wid=1, stretch_len=2)
         start_y = random.randint(-250, 250)
         car.goto(START_X, start_y)
         self.all_cars.append(car)
 
-    # def move(self):
-    #     self.forward(MOVE_INCREMENT)
+    def move(self):
+        for car in self.all_cars:
+            car.forward(STARTING_MOVE_DISTANCE)
