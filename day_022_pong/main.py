@@ -25,8 +25,17 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
     ball.move()
+
     # Detect collision with wall. (glitching double bounce)
     if ball.ycor() > 280 or ball.ycor() < -280:
-        ball.bounce()
+        ball.bounce_y()
+
+    # Detect collision with r_paddle
+    if ball.distance(r_paddle) < 50 and ball.xcor() > 320:
+        ball.bounce_x()
+
+    # Detect collision with l_paddle
+    if ball.distance(l_paddle) < 50 and ball.xcor() < -320:
+        ball.bounce_x()
 
 screen.exitonclick()
