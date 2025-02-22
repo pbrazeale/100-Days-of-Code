@@ -1,4 +1,5 @@
 from turtle import Turtle
+from ball import Ball
 
 ALIGNMENT = "center"
 FONT = ("Arial", 40, "bold")
@@ -18,7 +19,7 @@ class Scoreboard(Turtle):
     def update_scoreboard(self):
         self.clear()
         self.write(
-            f"{self.left_score}  |  {self.right_score}", align=ALIGNMENT, font=FONT
+            f"{self.left_score}     {self.right_score}", align=ALIGNMENT, font=FONT
         )
 
     def score(self, out_of_bounds):
