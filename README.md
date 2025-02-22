@@ -127,3 +127,17 @@ A fun project, but for some reason my turtle module is glitched, and no matter w
 Gave up on the bug issue after searching for 30 minutes with no answer.
 
 Otherwise, I achieved the project, but not going to really count this one, as I have no clue what's causing the bug, that actually bricks the game.
+
+### Day 023 turtle
+Built a capstone Turtle game.
+I spent hours in school playing a frogger flash game, so this was nostalgic.
+Tasks completed without guidance:
+- Created Player move and implemented
+- 
+Needed Hints:
+- create_cars()
+	- I was trying to crate the car within the `__init__(self)`
+	- Updated stretch to 2
+	- Updated randint range -250, 250
+		- I was trying to make CarManager a Turtle, but it's the car that needs to be a Turtle(). 
+
