@@ -15,7 +15,7 @@ l_paddle = Paddle((-350, 0))
 
 ball = Ball()
 
-scoreboard = Scoreboard()
+scoreboard = Scoreboard((0, 230))
 
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up")
@@ -42,12 +42,12 @@ while game_is_on:
         ball.bounce_x()
 
     # Detect out of bounds right
-    if ball.xcor > 380:
+    if ball.xcor() > 380:
         ball.reset()
         scoreboard.score("right")
 
     # Detect out of bounds left
-    if ball.xcor < -380:
+    if ball.xcor() < -380:
         ball.reset()
         scoreboard.score("left")
 
