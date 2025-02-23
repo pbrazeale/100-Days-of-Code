@@ -10,7 +10,7 @@ class Scoreboard(Turtle):
         self.penup()
         self.level = 1
         self.goto(-280, 260)
-        self.udpate_scoreboard
+        self.udpate_scoreboard()
 
     def udpate_scoreboard(self):
         self.clear()
@@ -18,4 +18,8 @@ class Scoreboard(Turtle):
 
     def level_up(self):
         self.level += 1
-        self.udpate_scoreboard
+        self.udpate_scoreboard()
+
+    def game_over(self):
+        self.goto(0, 0)
+        self.write(f"GAME OVER", align="center", font=FONT)
