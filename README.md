@@ -128,18 +128,7 @@ Gave up on the bug issue after searching for 30 minutes with no answer.
 
 Otherwise, I achieved the project, but not going to really count this one, as I have no clue what's causing the bug, that actually bricks the game.
 
-### Day 023 turtle
+### Day 023 Turtle Crossing
 Built a capstone Turtle game.
-I spent hours in school playing a frogger flash game, so this was nostalgic.
-Tasks completed without guidance:
-- Created Player move and implemented
-- 
-Needed Hints:
-- create_cars()
-	- I was trying to crate the car within the `__init__(self)`
-	- Updated stretch to 2
-	- Updated randint range -250, 250
-		- I was trying to make CarManager a Turtle, but it's the car that needs to be a Turtle(). 
-	- random_chance insdie CarManager
-		- Need to solidify the idea that methods go within the class and functions are strictly for the game function itself. IE call class and update screen.
-        
+
+A simplistic frogger clone, but an excellent learning tool to solidify the concepts around OOP and separation of methods.
