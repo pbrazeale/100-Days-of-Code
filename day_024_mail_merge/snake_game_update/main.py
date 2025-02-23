@@ -45,6 +45,7 @@ while game_is_one:
         or snake.head.ycor() < BOTTOM_WALL
     ):
         scoreboard.reset()
+        snake.reset()
 
     # Detect collision with tail.
     for segment in snake.segments[1:]:
