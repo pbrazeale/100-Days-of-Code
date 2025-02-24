@@ -132,3 +132,7 @@ Otherwise, I achieved the project, but not going to really count this one, as I 
 Built a capstone Turtle game.
 
 A simplistic frogger clone, but an excellent learning tool to solidify the concepts around OOP and separation of methods.
+
+#### Day 024 Mail Merge
+Excellent project. I can already see how using this to rename filenames throughout a dir would be helpful.
+
