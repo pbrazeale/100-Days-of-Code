@@ -137,3 +137,6 @@ A simplistic frogger clone, but an excellent learning tool to solidify the conce
 Excellent project. I can already see how using this to rename filenames throughout a dir would be helpful.
 
 ### Day 025 U.S. States Game
+Built a quiz game using turtle and pandas.
+
+Learned the *basics* of pandas, and can already see the advantages over an excel sheet that I'm accustomed to. 
