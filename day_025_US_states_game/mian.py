@@ -49,16 +49,15 @@ import pandas
 
 # idneitfy number of Gray, Cinnamon, Black squirrels
 data = pandas.read_csv("2018_Central_Park_Squirrel_Census.csv")
-primary_colors = data["Primary Fur Color"]
 # gray
-gray = primary_colors == "Gray"
-gray_count = gray.count()
-# print(gray_count)
-cinnamon = primary_colors == "Cinnamon"
-cinnamon_count = cinnamon.count()
+gray = data[data["Primary Fur Color"] == "Gray"]
+gray_count = len(gray)
+print(gray_count)
+cinnamon = data[data["Primary Fur Color"] == "Cinnamon"]
+cinnamon_count = len(cinnamon)
 
-black = primary_colors == "Black"
-black_count = black.count()
+black = data[data["Primary Fur Color"] == "Black"]
+black_count = len(black)
 
 # Build new CSV
 # Fur Color, Count
@@ -68,3 +67,4 @@ processed_primary_colors = {
 }
 squirrel_count = pandas.DataFrame(processed_primary_colors)
 print(squirrel_count)
+squirrel_count.to_csv("primary_color_squrrel_count.csv")
