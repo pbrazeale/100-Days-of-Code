@@ -17,8 +17,7 @@ correct_answers = []
 
 
 # use a loop to allow the user to keep guessing
-game_is_on = True
-while game_is_on:
+while len(correct_answers) < 50:
     # keep track of score
     score = len(correct_answers)
 
