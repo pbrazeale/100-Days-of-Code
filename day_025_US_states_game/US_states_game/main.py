@@ -29,6 +29,7 @@ while game_is_on == True:
     if answer_state in state_list:
         correct_answers.append(answer_state)
         # select the x and y and then pass into the class to write the state on screen.
+        # This is me stuck.
         position = data[data.x]
         # write correct guess onto the map
         writer(answer_state, position)
