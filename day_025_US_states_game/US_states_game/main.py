@@ -1,6 +1,5 @@
 import turtle
 import pandas
-import writer
 
 screen = turtle.Screen()
 screen.setup(800, 600)
@@ -8,11 +7,14 @@ screen.title("U.S. States Game")
 image = "blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
+writer = turtle.Turtle()
+writer.hideturtle()
+writer.penup()
 
 
 # use a loop to allow the user to keep guessing
-game_is_on == True
-while game_is_on == True:
+game_is_on = True
+while game_is_on:
 
     # Convert the guess to Title Case
     answer_state = screen.textinput(
@@ -28,11 +30,16 @@ while game_is_on == True:
 
     if answer_state in state_list:
         correct_answers.append(answer_state)
+        state_data = data[data.state == answer_state]
         # select the x and y and then pass into the class to write the state on screen.
         # This is me stuck.
-        position = data[data.x]
+        position = (state_data.x.item(), state_data.y.item())
+        # position = (0, 0)
         # write correct guess onto the map
-        writer(answer_state, position)
+        print(position)
+        writer.goto(position)
+        writer.write(answer_state)
+        # print(answer_state)
 
         print("true")
     else:
