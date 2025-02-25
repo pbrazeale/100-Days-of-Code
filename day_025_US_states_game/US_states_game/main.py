@@ -12,38 +12,30 @@ writer.hideturtle()
 writer.penup()
 
 
+# record the correct guesses in a list
+correct_answers = []
+
+
 # use a loop to allow the user to keep guessing
 game_is_on = True
 while game_is_on:
+    # keep track of score
+    score = len(correct_answers)
 
     # Convert the guess to Title Case
     answer_state = screen.textinput(
-        title="Guess the State", prompt="What's another state's name?"
+        title=f"{score}/50 Guess the State", prompt="What's another state's name?"
     ).title()
 
     # Check if the guess is among the 50 states
     data = pandas.read_csv("50_states.csv")
     state_list = data.state.to_list()
 
-    # record the correct guesses in a list
-    correct_answers = []
-
     if answer_state in state_list:
         correct_answers.append(answer_state)
         state_data = data[data.state == answer_state]
         # select the x and y and then pass into the class to write the state on screen.
-        # This is me stuck.
         position = (state_data.x.item(), state_data.y.item())
-        # position = (0, 0)
         # write correct guess onto the map
-        print(position)
         writer.goto(position)
         writer.write(answer_state)
-        # print(answer_state)
-
-        print("true")
-    else:
-        print("false")
-
-    # keep track of score
-    score = len(correct_answers)
