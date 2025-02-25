@@ -45,7 +45,8 @@ while len(correct_answers) < 50:
 # states_to_learn
 states_to_learn = []
 for state in state_list:
-    if state not in answer_state:
+    if state not in correct_answers:
         states_to_learn.append(state)
 
-print(states_to_learn)
+data_states_to_learn = pandas.DataFrame(states_to_learn, columns=["States To Learn"])
+data_states_to_learn.to_csv("states_to_learn.csv")
