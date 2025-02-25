@@ -30,6 +30,9 @@ while len(correct_answers) < 50:
     data = pandas.read_csv("50_states.csv")
     state_list = data.state.to_list()
 
+    if answer_state == "Exit":
+        break
+
     if answer_state in state_list:
         correct_answers.append(answer_state)
         state_data = data[data.state == answer_state]
@@ -38,3 +41,11 @@ while len(correct_answers) < 50:
         # write correct guess onto the map
         writer.goto(position)
         writer.write(answer_state)
+
+# states_to_learn
+states_to_learn = []
+for state in state_list:
+    if state not in answer_state:
+        states_to_learn.append(state)
+
+print(states_to_learn)
