@@ -136,3 +136,4 @@ A simplistic frogger clone, but an excellent learning tool to solidify the conce
 ### Day 024 Mail Merge
 Excellent project. I can already see how using this to rename filenames throughout a dir would be helpful.
 
+### Day 025 U.S. States Game
