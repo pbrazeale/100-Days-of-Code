@@ -15,3 +15,7 @@ list_of_strings = ["9", "0", "32", "8", "2", "8", "64", "29", "42", "99"]
 numbers = [int(n) for n in list_of_strings]
 result = [n for n in numbers if n % 2 == 0]
 print(result)
+
+
+new_dict = {new_key: new_value for item in list}
+new_dict = {new_key: new_value for (key, value) in dict.items() if test}
