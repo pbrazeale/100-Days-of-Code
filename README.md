@@ -140,3 +140,8 @@ Excellent project. I can already see how using this to rename filenames througho
 Built a quiz game using turtle and pandas.
 
 Learned the *basics* of pandas, and can already see the advantages over an excel sheet that I'm accustomed to. 
+
+### Day 026 NATO Alphabet
+Built a CLI "word" to NATO phonetic alphabet converter.
+
+Learned more built in functionality for pandas, List comprehension, and Dictionary comprehension. A pandas DataFrame functions similarly to a dictionary. 
