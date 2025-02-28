@@ -145,3 +145,8 @@ Learned the *basics* of pandas, and can already see the advantages over an excel
 Built a CLI "word" to NATO phonetic alphabet converter.
 
 Learned more built in functionality for pandas, List comprehension, and Dictionary comprehension. A pandas DataFrame functions similarly to a dictionary. 
+
+### Day 027 Tkinter
+Built GUI Miles to Km converter.
+
+Built a working final project without watching the video. Grid system makes placement easy! Updated km formula from 1.6 to 1.609.
