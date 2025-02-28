@@ -22,7 +22,7 @@ km_label.grid(column=2, row=1)
 
 
 def calculate():
-    km_int = f"{float(miles_input.get()) * 1.6: .2f}"
+    km_int = f"{float(miles_input.get()) * 1.609: .2f}"
     km_int_label.config(text=km_int)
 
 
