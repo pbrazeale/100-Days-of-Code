@@ -11,6 +11,8 @@ def add_password():
 
     with open("password_log.txt", "a") as file:
         file.write(f"{website_text} | {email_text} | {password_text}")
+        website_input.delete(0, END)
+        password_input.delete(0, END)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
