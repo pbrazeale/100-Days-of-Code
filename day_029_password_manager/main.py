@@ -1,6 +1,12 @@
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
+def generate_password():
+    pass
+
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
+def add_password():
+    pass
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 from tkinter import *
@@ -9,10 +15,33 @@ window = Tk()
 window.title("Password Manager")
 window.config(padx=20, pady=20)
 
-canvas = Canvas(width=600, height=600)
+canvas = Canvas(width=400, height=400)
 logo_img = PhotoImage(file="logo.png")
-canvas.create_image(300, 120, image=logo_img)
+canvas.create_image(200, 100, image=logo_img)
 canvas.grid(column=1, row=0)
 
+website_label = Label(text="Website:")
+website_label.grid(column=0, row=1)
+
+website_input = Entry(width=35)
+website_input.grid(column=1, row=1, columnspan=2)
+
+email_username_label = Label(text="Email/Username:")
+email_username_label.grid(column=0, row=2)
+
+email_input = Entry(width=35)
+email_input.grid(column=1, row=2, columnspan=2)
+
+password_label = Label(text="Password:")
+password_label.grid(column=0, row=3)
+
+password_input = Entry(width=21)
+password_input.grid(column=1, row=3)
+
+password_btn = Button(text="Generate Password", command=generate_password)
+password_btn.grid(column=2, row=3)
+
+add_password_btn = Button(text="Add", width=36, command=add_password())
+add_password_btn.grid(column=1, row=4, columnspan=2)
 
 window.mainloop()
