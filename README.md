@@ -155,3 +155,6 @@ Built a working final project without watching the video. Grid system makes plac
 Built a pomodoro timer with Tkinter.
 
 This was fun and far easier than I thought it would be at first glance. Was able to solve each section ahead of the instructional videos.
+
+#### Day 029 Password Generator
+Built a password generator with Tkinter, random, and pyperclip.
