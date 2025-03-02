@@ -24,12 +24,15 @@ def start_timer():
 
     if REPS == 7:
         count_down(long_break_sec)
+        timer_label.config(text="Long Break", fg=RED)
     elif REPS % 2 != 0:
         REPS += 1
         count_down(short_break_sec)
+        timer_label.config(text="Short Break", fg=PINK)
     else:
         REPS += 1
         count_down(work_sec)
+        timer_label.config(text="Work", fg=GREEN)
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
@@ -43,6 +46,8 @@ def count_down(count):
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
     if count > 0:
         window.after(1000, count_down, count - 1)
+    else:
+        start_timer()
 
 
 # ---------------------------- UI SETUP ------------------------------- #
