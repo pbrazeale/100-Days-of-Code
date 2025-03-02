@@ -28,6 +28,7 @@ website_label.grid(column=0, row=1)
 
 website_input = Entry(width=35)
 website_input.grid(column=1, row=1, columnspan=2)
+website_input.focus()
 
 # Email Row
 email_username_label = Label(text="Email/Username:")
