@@ -37,7 +37,7 @@ def start_timer():
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def count_down(count):
-
+    global REPS
     count_min = math.floor(count / 60)
     count_sec = count % 60
     if count_sec < 10:
@@ -48,6 +48,9 @@ def count_down(count):
         window.after(1000, count_down, count - 1)
     else:
         start_timer()
+        check_mark = "✓"
+        reps_count = math.floor(REPS / 2)
+        check_mark_label.config(text=f"{check_mark * reps_count}")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -72,7 +75,7 @@ start_btn.grid(column=0, row=2)
 reset_btn = Button(text="Reset", highlightthickness=0)
 reset_btn.grid(column=2, row=2)
 
-check_mark_label = Label(text="✓", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 20, "bold"))
+check_mark_label = Label(fg=GREEN, bg=YELLOW, font=(FONT_NAME, 20, "bold"))
 check_mark_label.grid(column=1, row=3)
 
 
