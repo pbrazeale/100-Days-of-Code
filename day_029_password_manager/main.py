@@ -5,7 +5,12 @@ def generate_password():
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def add_password():
-    pass
+    website_text = website_input.get()
+    email_text = email_input.get()
+    password_text = password_input.get()
+
+    with open("password_log.txt", "a") as file:
+        file.write(f"{website_text} | {email_text} | {password_text}")
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -48,7 +53,7 @@ password_btn = Button(text="Generate Password", command=generate_password)
 password_btn.grid(column=2, row=3)
 
 # Add Password Row
-add_password_btn = Button(text="Add", width=36, command=add_password())
+add_password_btn = Button(text="Add", width=36, command=add_password)
 add_password_btn.grid(column=1, row=4, columnspan=2)
 
 window.mainloop()
