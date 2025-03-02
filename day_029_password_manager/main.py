@@ -13,10 +13,21 @@ def add_password():
     email_text = email_input.get()
     password_text = password_input.get()
 
-    with open("password_log.txt", "a") as file:
-        file.write(f"{website_text} | {email_text} | {password_text}\n")
-        website_input.delete(0, END)
-        password_input.delete(0, END)
+    if len(website_text) > 0 and len(email_text) > 0 and len(password_text) > 0:
+        is_okay = messagebox.askokcancel(
+            title=website_text,
+            message=f"These are the details entered: \nEmail: {email_text} \nPassword: {password_text} \nIs it okay to say?",
+        )
+    else:
+        messagebox.showinfo(
+            title="Oops", message="Please don't leave any fields empty!"
+        )
+
+    if is_okay:
+        with open("password_log.txt", "a") as file:
+            file.write(f"{website_text} | {email_text} | {password_text}\n")
+            website_input.delete(0, END)
+            password_input.delete(0, END)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
