@@ -150,3 +150,8 @@ Learned more built in functionality for pandas, List comprehension, and Dictiona
 Built GUI Miles to Km converter.
 
 Built a working final project without watching the video. Grid system makes placement easy! Updated km formula from 1.6 to 1.609.
+
+### Day 028 Pomodoro Timer
+Built a pomodoro timer with Tkinter.
+
+This was fun and far easier than I thought it would be at first glance. Was able to solve each section ahead of the instructional videos.
