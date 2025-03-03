@@ -18,6 +18,15 @@ canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0
 canvas.create_image(410, 273, image=card_front_image)
 canvas.grid(column=0, row=0, columnspan=2)
 
+# Language
+language_label = Label(canvas, text="French", bg="white", font=("Arial", 40, "italic"))
+language_label.place(x=400, y=150)
+
+# Word
+word_label = Label(text="Testing", bg="white", font=("Arial", 60, "bold"))
+word_label.place(relx=0.5, y=263)
+
+
 # buttons
 wrong_btn = Button(image=wrong_image, highlightthickness=0, padx=50, pady=50)
 wrong_btn.grid(column=0, row=1)
