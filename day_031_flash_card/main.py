@@ -18,5 +18,11 @@ canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0
 canvas.create_image(410, 273, image=card_front_image)
 canvas.grid(column=0, row=0, columnspan=2)
 
+# buttons
+wrong_btn = Button(image=wrong_image, highlightthickness=0, padx=50, pady=50)
+wrong_btn.grid(column=0, row=1)
+
+right_btn = Button(image=right_image, highlightthickness=0, padx=50, pady=50)
+right_btn.grid(column=1, row=1)
 
 window.mainloop()
