@@ -7,4 +7,4 @@
 try:
     file = open("a_file.txt")
 except:
-    print("there was an error")
+    file = open("a_file.txt", "w")
