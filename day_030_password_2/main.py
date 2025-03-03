@@ -116,6 +116,14 @@ def save():
             password_entry.delete(0, END)
 
 
+def search():
+    website_key = website_entry.get()
+    try:
+        with open("data.json", "r") as data_file:
+            website_info = json.load(data_file)
+            print(website_info)
+
+
 # ---------------------------- UI SETUP ------------------------------- #
 
 window = Tk()
@@ -150,5 +158,7 @@ generate_password_button = Button(text="Generate Password", command=generate_pas
 generate_password_button.grid(row=3, column=2)
 add_button = Button(text="Add", width=36, command=save)
 add_button.grid(row=4, column=1, columnspan=2)
+search_button = Button(text="Search", command=search)
+search_button.grid(column=2, row=1)
 
 window.mainloop()
