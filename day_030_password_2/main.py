@@ -22,5 +22,4 @@ else:
     print(content)
 
 finally:
-    file.close()
-    print("file was closed")
+    raise TypeError("This an error that I made up.")
