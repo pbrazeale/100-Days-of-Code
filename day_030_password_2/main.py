@@ -116,12 +116,29 @@ def save():
             password_entry.delete(0, END)
 
 
+# ---------------------------- Serach Function ------------------------------- #
 def search():
     website_key = website_entry.get()
     try:
-        with open("data.json", "r") as data_file:
+        with open("data.json") as data_file:
             website_info = json.load(data_file)
-            print(website_info)
+    except FileNotFoundError:
+        messagebox.showinfo(title="Error", message="No data file found.")
+    else:
+        if website_key in website_info:
+            email = website_info[website_key]["email"]
+            password = website_info[website_key]["password"]
+            messagebox.showinfo(
+                title=website_key, message=f"Email: {email}\nPassword: {password}"
+            )
+        else:
+            messagebox.showinfo(
+                title="Error", message=f"No details for {website_key} exists."
+            )
+            # messagebox.showinfo(
+            #     title="Webiste Found",
+            #     message=f"Password already exisits.\nWebsite: {website_key}\nEmail: {website_info[website_key]["email"]}\nPassword: {website_info[website_key]["password"]}",
+            # )
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -144,8 +161,8 @@ password_label = Label(text="Password:")
 password_label.grid(row=3, column=0)
 
 # Entries
-website_entry = Entry(width=35)
-website_entry.grid(row=1, column=1, columnspan=2)
+website_entry = Entry(width=21)
+website_entry.grid(row=1, column=1)
 website_entry.focus()
 email_entry = Entry(width=35)
 email_entry.grid(row=2, column=1, columnspan=2)
@@ -158,7 +175,7 @@ generate_password_button = Button(text="Generate Password", command=generate_pas
 generate_password_button.grid(row=3, column=2)
 add_button = Button(text="Add", width=36, command=save)
 add_button.grid(row=4, column=1, columnspan=2)
-search_button = Button(text="Search", command=search)
+search_button = Button(text="Search", command=search, width=13)
 search_button.grid(column=2, row=1)
 
 window.mainloop()
