@@ -15,16 +15,14 @@ card_back_image = PhotoImage(file="./images/card_back.png")
 
 # Create Canvas
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
-canvas.create_image(410, 273, image=card_front_image)
+canvas.create_image(400, 273, image=card_front_image)
 canvas.grid(column=0, row=0, columnspan=2)
 
-# Language
-language_label = Label(canvas, text="French", bg="white", font=("Arial", 40, "italic"))
-language_label.place(x=400, y=150)
+# Language text
+canvas.create_text(400, 150, text="French", font=("Arial", 40, "italic"))
 
 # Word
-word_label = Label(text="Testing", bg="white", font=("Arial", 60, "bold"))
-word_label.place(relx=0.5, y=263)
+canvas.create_text(400, 263, text="Testing", font=("Arial", 60, "bold"))
 
 
 # buttons
