@@ -156,5 +156,11 @@ Built a pomodoro timer with Tkinter.
 
 This was fun and far easier than I thought it would be at first glance. Was able to solve each section ahead of the instructional videos.
 
-#### Day 029 Password Generator
+### Day 029 & 030 Password Generator
 Built a password generator with Tkinter, random, and pyperclip.
+#### Git Restore Deleted File
+Accidentally deleted `day_029_password_manager/main.py` thankfully stack overflow saved me: https://stackoverflow.com/questions/953481/how-do-i-find-and-restore-a-deleted-file-in-a-git-repository
+
+>`git log --diff-filter=D --summary` log, difference filtered by D (delete), summary for short.
+
+>`git checkout e4e6d4d5e5c59c69f3bd7be2~1 path/to/file.ext` ~1 step back one hash from where the file was deleted and pull the file path. 
