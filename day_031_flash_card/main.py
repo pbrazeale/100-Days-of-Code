@@ -1,6 +1,13 @@
 from tkinter import *
+import pandas
 
 BACKGROUND_COLOR = "#B1DDC6"
+
+data = pandas.read_csv("data/french_words.csv")
+to_learn_dic = data.to_dict()
+
+def next_card():
+
 
 
 window = Tk()
@@ -26,10 +33,10 @@ canvas.create_text(400, 263, text="Testing", font=("Arial", 60, "bold"))
 
 
 # buttons
-wrong_btn = Button(image=wrong_image, highlightthickness=0, padx=50, pady=50)
+wrong_btn = Button(image=wrong_image, highlightthickness=0, padx=50, pady=50, command=next_card)
 wrong_btn.grid(column=0, row=1)
 
-right_btn = Button(image=right_image, highlightthickness=0, padx=50, pady=50)
+right_btn = Button(image=right_image, highlightthickness=0, padx=50, pady=50, command=next_card)
 right_btn.grid(column=1, row=1)
 
 window.mainloop()
