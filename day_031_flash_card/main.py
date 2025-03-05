@@ -20,8 +20,8 @@ def next_card():
     window.after_cancel(flip_timer)
     current_card = random.choice(to_learn_dict)
     current_card["French"]
-    canvas.itemconfig(card_title, text="French", fill="balck")
-    canvas.itemconfig(card_word, text=current_card["French"], fill="balck")
+    canvas.itemconfig(card_title, text="French", fill="black")
+    canvas.itemconfig(card_word, text=current_card["French"], fill="black")
     canvas.itemconfig(card_background, image=card_front_image)
     flip_timer = window.after(3000, func=flip_card)
 
@@ -34,7 +34,7 @@ def flip_card():
 
 def is_known():
     to_learn_dict.remove(current_card)
-    pandas.DataFrame(to_learn_dict)
+    data = pandas.DataFrame(to_learn_dict)
     data.to_csv("./data/words_to_learn.csv", index=False)
     next_card()
 
