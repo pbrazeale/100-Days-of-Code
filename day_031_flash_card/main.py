@@ -20,6 +20,7 @@ def next_card():
 def flip_card():
     canvas.itemconfig(card_title, text="English")
     canvas.itemconfig(card_word, text=current_card["English"])
+    canvas.itemconfig(card_background, image=card_back_image)
 
 
 window = Tk()
@@ -36,7 +37,7 @@ card_back_image = PhotoImage(file="./images/card_back.png")
 
 # Create Canvas
 canvas = Canvas(width=800, height=526, bg=BACKGROUND_COLOR, highlightthickness=0)
-canvas.create_image(400, 273, image=card_front_image)
+card_background = canvas.create_image(400, 273, image=card_front_image)
 canvas.grid(column=0, row=0, columnspan=2)
 
 # Language text
