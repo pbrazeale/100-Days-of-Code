@@ -4,7 +4,7 @@ import random
 
 BACKGROUND_COLOR = "#B1DDC6"
 
-data = pandas.read_csv("data/french_words.csv")
+data = pandas.read_csv("data/words_to_learn.csv")
 to_learn_dict = data.to_dict(orient="records")
 current_card = {}
 
@@ -24,6 +24,13 @@ def flip_card():
     canvas.itemconfig(card_title, text="English", fill="white")
     canvas.itemconfig(card_word, text=current_card["English"], fill="white")
     canvas.itemconfig(card_background, image=card_back_image)
+
+
+def is_known():
+    to_learn_dict.remove(current_card)
+    pandas.DataFrame(to_learn_dict)
+    data.to_csv("./data/words_to_learn.csv")
+    next_card()
 
 
 window = Tk()
@@ -57,7 +64,7 @@ wrong_btn = Button(
 wrong_btn.grid(column=0, row=1)
 
 right_btn = Button(
-    image=right_image, highlightthickness=0, padx=50, pady=50, command=next_card
+    image=right_image, highlightthickness=0, padx=50, pady=50, command=is_known
 )
 right_btn.grid(column=1, row=1)
 
