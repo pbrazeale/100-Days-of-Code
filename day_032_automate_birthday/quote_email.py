@@ -29,3 +29,14 @@ def send_email():
             to_addrs=target_email,
             msg=(f"Subject:{email_subject}\n\n{email_body}"),
         )
+
+
+def check_date():
+    global now, quote_of_the_day
+    if now.weekday() == 4:
+        select_quote()
+        print(quote_of_the_day)
+        # send_email()
+
+
+check_date()
