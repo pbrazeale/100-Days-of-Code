@@ -16,6 +16,12 @@ month = now.month
 day = now.day
 now_format = (month, day)
 
+birthdays_dict = {
+    (data_row.month, data_row.day): data_row for (index, data_row) in data.iterrows()
+}
+
+if now_format in birthdays_dict:
+    pass
 
 # 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
 
