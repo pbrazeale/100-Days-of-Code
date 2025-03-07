@@ -170,3 +170,9 @@ Built a flash card language app.
 
 Used this lesson to build my own Flash Card App to learn CompTIA Security+ Acronyms. 
 https://github.com/pbrazeale/security_plus_acronym_flash_cards
+
+### Day 032 Automate Birthday Emails
+Built a app that automatically sends emails. 
+- Used smtplib to send emails
+- Setup app codes on gmail
+- Used pandas to convert csv into data table

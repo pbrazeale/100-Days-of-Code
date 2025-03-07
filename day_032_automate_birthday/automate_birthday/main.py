@@ -26,7 +26,7 @@ if now_format in birthdays_dict:
     with open(file_path) as file:
         letter = file.read()
         letter = letter.replace("[NAME]", birthday_person["name"].title())
-        print(letter)
+        # print(letter)
 
     # 4. Send the letter generated in step 3 to that person's email address.
     email_subject = "Happy Birthday"
