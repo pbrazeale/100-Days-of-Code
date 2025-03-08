@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 import smtplib
+from vars2 import *
 
 # import iss_call
 
@@ -63,7 +64,17 @@ def main():
 
 
 def send_email():
-    pass
+    email_subject = "ISS Overhead"
+    email_body = f"Go outside and look {iss_lat}, {iss_lng}"
+
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        connection.starttls()
+        connection.login(user=test_email, password=test_email_password)
+        connection.sendmail(
+            from_addr=test_email,
+            to_addrs=target_email,
+            msg=(f"Subject:{email_subject}\n\n{email_body}"),
+        )
 
 
 if __name__ == "__main__":
