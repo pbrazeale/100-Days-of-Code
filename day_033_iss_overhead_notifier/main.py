@@ -32,8 +32,10 @@ sunrise_resposne = requests.get(
 )
 sunrise_resposne.raise_for_status()
 
-print(sunrise_resposne.json())
+# print(sunrise_resposne.json())
 data = sunrise_resposne.json()
 
 sunset = data["results"]["sunset"]
 sunrise = data["results"]["sunrise"]
+
+print(sunrise.split("T")[1].split(":")[0])
