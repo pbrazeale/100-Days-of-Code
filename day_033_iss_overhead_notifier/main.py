@@ -20,8 +20,7 @@ def iss_call():
     iss_longitude = float(data["iss_position"]["longitude"])
 
 
-def main():
-
+def sun_call():
     parameters = {
         "lat": MY_LAT,
         "lng": MY_LNG,
@@ -38,6 +37,9 @@ def main():
 
     sunset = data["results"]["sunset"]
     sunrise = data["results"]["sunrise"]
+
+
+def main():
 
     # print(f"sunrise {sunrise.split("T")[1].split(":")[0]}")
 
