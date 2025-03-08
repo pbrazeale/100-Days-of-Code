@@ -12,3 +12,7 @@ data = response.json()
 
 longitude = data["iss_positon"]["longitude"]
 latitude = data["iss_positon"]["latitude"]
+
+iss_position = (longitude, latitude)
+
+print(iss_position)
