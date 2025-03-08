@@ -2,6 +2,7 @@ import requests
 from datetime import datetime
 import smtplib
 from vars2 import *
+import time
 
 # import iss_call
 
@@ -11,6 +12,7 @@ iss_lat = 0
 iss_lng = 0
 sunset = 0
 sunrise = 0
+time_now = datetime.now()
 
 
 def iss_call():
@@ -42,16 +44,20 @@ def sun_call():
     # print(f"sunrise {sunrise.split("T")[1].split(":")[0]}")
 
 
-def main():
-    time_now = datetime.now()
-    # print(time_now.hour)
-    sun_call()
-
-    # if dark
+def is_dark():
     if (
         int(sunset.split("T")[1].split(":")[0]) - 6 < time_now.hour
         or int(sunrise.split("T")[1].split(":")[0]) - 6 > time_now.hour
     ):
+        return True
+
+
+def main():
+    # print(time_now.hour)
+    sun_call()
+
+    # if dark
+    if is_dark() and iss_overhead():
         # Check if within sight
         if (
             (MY_LAT + 5) > iss_lat
