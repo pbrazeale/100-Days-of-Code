@@ -14,8 +14,8 @@ iss_response.raise_for_status()
 data = iss_response.json()
 # print(data["iss_position"])
 
-latitude = data["iss_position"]["latitude"]
-longitude = data["iss_position"]["longitude"]
+latitude = float(data["iss_position"]["latitude"])
+longitude = float(data["iss_position"]["longitude"])
 
 iss_position = (latitude, longitude)
 
@@ -38,4 +38,14 @@ data = sunrise_resposne.json()
 sunset = data["results"]["sunset"]
 sunrise = data["results"]["sunrise"]
 
-print(sunrise.split("T")[1].split(":")[0])
+# print(sunrise.split("T")[1].split(":")[0])
+
+time_now = datetime.now()
+print(time_now)
+
+# Check if within sight
+within_sight = False
+if ((MY_LAT + 5) > iss_position[0] and (MY_LAT - 5) < iss_position[0]) and (
+    (MY_LNG + 5) > iss_position[1] and (MY_LNG - 5) < iss_position[1]
+):
+    within_sight = True
