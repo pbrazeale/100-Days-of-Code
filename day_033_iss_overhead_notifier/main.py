@@ -45,6 +45,7 @@ def sun_call():
 
 
 def is_dark():
+    # Check if iss within sight
     if (
         int(sunset.split("T")[1].split(":")[0]) - 6 < time_now.hour
         or int(sunrise.split("T")[1].split(":")[0]) - 6 > time_now.hour
@@ -52,23 +53,18 @@ def is_dark():
         return True
 
 
-def main():
-    # print(time_now.hour)
-    sun_call()
-
+def iss_overhead():
     # if dark
-    if is_dark() and iss_overhead():
-        # Check if within sight
-        if (
-            (MY_LAT + 5) > iss_lat
-            and (MY_LAT - 5) < iss_lat
-            and (MY_LNG + 5) > iss_lng
-            and (MY_LNG - 5) < iss_lng
-        ):
-            # send email
-            send_email()
+    if (
+        (MY_LAT + 5) > iss_lat
+        and (MY_LAT - 5) < iss_lat
+        and (MY_LNG + 5) > iss_lng
+        and (MY_LNG - 5) < iss_lng
+    ):
+        return True
 
 
+# send email
 def send_email():
     email_subject = "ISS Overhead"
     email_body = f"Go outside and look {iss_lat}, {iss_lng}"
@@ -81,6 +77,20 @@ def send_email():
             to_addrs=target_email,
             msg=(f"Subject:{email_subject}\n\n{email_body}"),
         )
+
+
+# check is_dark and iss_overhead every 10 minutes
+def check_10_min():
+    while True:
+        time.sleep(600)
+        if is_dark() and iss_overhead():
+            send_email()
+
+
+def main():
+    # print(time_now.hour)
+    sun_call()
+    check_10_min()
 
 
 if __name__ == "__main__":
