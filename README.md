@@ -176,3 +176,17 @@ Built a app that automatically sends emails.
 - Used smtplib to send emails
 - Setup app codes on gmail
 - Used pandas to convert csv into data table
+
+### Day 033 ISS Overhead Notifier
+Built an app that uses two APIs to track sunset and ISS location, and then sends an email notification via smtplib.
+
+Built functions:
+- iss_call()
+- sun_call()
+- is_dark()
+- iss_overhead()
+- send_email()
+- check_10_min()
+- main()
+
+This was an excellent project, and I already see how using APIs and cronjobs to build an automated pipeline would save me hours of work, and more importantly create automatic notifications so that I can stop checking dashboards manually throughout the day. Already thinking through project ideas...
