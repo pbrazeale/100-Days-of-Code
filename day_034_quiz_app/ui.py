@@ -17,8 +17,12 @@ class QuizInterface:
 
         self.canvas = Canvas(width=300, height=250, bg="white")
         self.question_text = self.canvas.create_text(
-            150, 125, text="Question Goes Here", fill=THEME_COLOR
+            150,
+            125,
+            text="Question Goes Here",
+            fill=THEME_COLOR,
+            font=("Arial", 20, "italic"),
         )
-        self.canvas.grid(row=1, column=0, columnspan=2)
+        self.canvas.grid(row=1, column=0, columnspan=2, pady=50)
 
         self.window.mainloop()
