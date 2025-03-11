@@ -46,9 +46,16 @@ class QuizInterface:
         self.canvas.itemconfig(self.question_text, text=q_text)
 
     def marked_true(self):
-        self.quiz.check_answer("True")
-        self.get_net_question()
+        is_right = self.quiz.check_answer("True")
+        self.give_feedback(is_right)
 
     def marked_false(self):
-        self.quiz.check_answer("False")
-        self.get_net_question()
+        is_right = self.quiz.check_answer("False")
+        self.give_feedback(is_right)
+
+    def give_feedback(self, is_right):
+        if is_right:
+            self.canvas.config(bg="green")
+        else:
+            self.canvas.config(bg="red")
+        self.window.after(1000, self.get_net_question)
