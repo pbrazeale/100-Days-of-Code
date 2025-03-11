@@ -42,8 +42,15 @@ class QuizInterface:
         self.window.mainloop()
 
     def get_net_question(self):
-        q_text = self.quiz.next_question()
-        self.canvas.itemconfig(self.question_text, text=q_text)
+        self.canvas.config(bg="white")
+        if self.quiz.still_has_questions():
+            self.score_label.config(text=f"Scoree: {self.quiz.score}")
+            q_text = self.quiz.next_question()
+            self.canvas.itemconfig(self.question_text, text=q_text)
+        else:
+            self.canvas.itemconfig(self.question_text, text="You've finsihed the quiz.")
+            self.true_button.config(state="disabled")
+            self.false_button.config(state="disabled")
 
     def marked_true(self):
         is_right = self.quiz.check_answer("True")
