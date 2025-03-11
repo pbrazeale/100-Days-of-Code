@@ -190,3 +190,8 @@ Built functions:
 - main()
 
 This was an excellent project, and I already see how using APIs and cronjobs to build an automated pipeline would save me hours of work, and more importantly create automatic notifications so that I can stop checking dashboards manually throughout the day. Already thinking through project ideas...
+
+### Day 034 Quiz App
+Built a GUI version of the quiz game from day 17.
+
+Learned about type suggestions.
