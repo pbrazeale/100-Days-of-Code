@@ -46,6 +46,8 @@ if diff_percent > 3:
     news_response = requests.get(NEWS_ENDPOINT, params=news_parameters)
     articles = news_response.json()["articles"]
 
+three_articles = articles[:3]
+print(three_articles)
 
 ## STEP 3: Use twilio.com/docs/sms/quickstart/python
 # to send a separate message with each article's title and description to your phone number.
