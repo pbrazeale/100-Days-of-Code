@@ -195,3 +195,11 @@ This was an excellent project, and I already see how using APIs and cronjobs to 
 Built a GUI version of the quiz game from day 17.
 
 Learned about type suggestions.
+
+### Day 035 Weather App
+Skipped. Couldn't get OpenWeather's student API.
+
+### Day 036 Stock Alert
+Built an app that uses API calls to check stock prices compared across two days, and then "sends" a text with the top three recent news articles about that stock to your phone.
+
+*Had to skip the Twilio texting part, and instead prints to console.*
