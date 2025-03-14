@@ -1,5 +1,6 @@
 import requests
 import pixela_var
+from datetime import datetime
 
 USERNAME = pixela_var.user
 TOKEN = pixela_var.token
@@ -30,7 +31,16 @@ pixela_graph_params = {
 
 headers = {"X-USER-TOKEN": TOKEN}
 
-reponse_g01 = requests.post(
-    url=pixela_graph_endpoint, json=pixela_graph_params, headers=headers
-)
-print(reponse_g01.text)
+# reponse_g01 = requests.post(
+#     url=pixela_graph_endpoint, json=pixela_graph_params, headers=headers
+# )
+# print(reponse_g01.text)
+
+# Post Pixel
+# https://docs.pixe.la/entry/post-pixel
+
+today = datetime.today().strftime("%Y%m%d")
+# print(today)
+
+
+# pixela_graph_post = requests.post()
