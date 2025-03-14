@@ -1,11 +1,14 @@
 import requests
 import pixela_var
 
+USERNAME = pixela_var.user
+TOKEN = pixela_var.token
+
 pixela_endpoint = "https://pixe.la/v1/users"
 
 pixela_user_params = {
-    "token": pixela_var.token,
-    "username": pixela_var.user,
+    "token": TOKEN,
+    "username": USERNAME,
     "agreeTermsOfService": "yes",
     "notMinor": "yes",
 }
@@ -15,3 +18,14 @@ pixela_user_params = {
 # print(response_user.text)
 
 # Create Graph
+pixela_graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
+
+pixela_graph_params = {
+    "X-API-" "id": "g01",
+    "name": "Pages Read",
+    "unit": "Pages",
+    "type": "int",
+    "color": "ajisai",
+}
+
+requests.post(url=pixela_graph_endpoint, json=pixela_graph_params)
