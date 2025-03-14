@@ -7,8 +7,6 @@ COMPANY_NAME = "Tesla Inc"
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
-## STEP 1: Use https://www.alphavantage.co/documentation/#daily
-# When stock price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
 stock_parameters = {
     "function": "TIME_SERIES_DAILY",
     "symbol": STOCK_NAME,
@@ -23,21 +21,19 @@ stock_data_list = [value for (key, value) in stock_data.items()]
 
 yesterday_stock_data = stock_data_list[0]
 yesterday_closing_price = yesterday_stock_data["4. close"]
-print(yesterday_closing_price)
+# print(yesterday_closing_price)
 
 two_days_ago_data = stock_data_list[1]
 two_days_ago_closing_price = two_days_ago_data["4. close"]
-print(two_days_ago_closing_price)
+# print(two_days_ago_closing_price)
 
 difference = abs(float(yesterday_closing_price) - float(two_days_ago_closing_price))
-print(difference)
+# print(difference)
 
 diff_percent = (difference / float(yesterday_closing_price)) * 100
-print(diff_percent)
+# print(diff_percent)
 
 
-## STEP 2: https://newsapi.org/
-# Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME.
 if diff_percent > 3:
     news_parameters = {
         "apiKey": values.newskey,
@@ -47,17 +43,21 @@ if diff_percent > 3:
     articles = news_response.json()["articles"]
 
 three_articles = articles[:3]
-print(three_articles)
+# print(three_articles)
 
-## STEP 3: Use twilio.com/docs/sms/quickstart/python
-# to send a separate message with each article's title and description to your phone number.
 formatted_articles = [
     f"Headline: {article['title']} \nBrief: {article['description']}"
     for article in three_articles
 ]
 
-# TODO 9. - Send each article as a separate message via Twilio.
 
+# TODO 9. - Send each article as a separate message via Twilio.
+if float(yesterday_closing_price) > float(two_days_ago_closing_price):
+    for article in formatted_articles:
+        print(f"{STOCK_NAME}: 🔺{diff_percent:.2f}%\n{article}")
+else:
+    for article in formatted_articles:
+        print(f"{STOCK_NAME}: 🔻{diff_percent:.2f}%\n{article}")
 
 # Optional TODO: Format the message like this:
 """
