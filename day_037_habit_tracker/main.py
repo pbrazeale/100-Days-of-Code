@@ -21,11 +21,16 @@ pixela_user_params = {
 pixela_graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
 
 pixela_graph_params = {
-    "X-API-" "id": "g01",
+    "id": "g01",
     "name": "Pages Read",
     "unit": "Pages",
     "type": "int",
     "color": "ajisai",
 }
 
-requests.post(url=pixela_graph_endpoint, json=pixela_graph_params)
+headers = {"X-USER-TOKEN": TOKEN}
+
+reponse_g01 = requests.post(
+    url=pixela_graph_endpoint, json=pixela_graph_params, headers=headers
+)
+print(reponse_g01.text)
