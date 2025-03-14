@@ -1,5 +1,5 @@
 import requests
-from values import *
+import values
 
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
@@ -15,8 +15,11 @@ stock_parameters = {
     "function": "TIME_SERIES_DAILY",
     "symbol": STOCK_NAME,
     "outputsize": "compact",
-    "apikey": alphakey,
+    "apikey": values.alphakey,
 }
+
+alpha_response = requests.get(STOCK_ENDPOINT, params=stock_parameters)
+print(alpha_response.json())
 
 
 # TODO 2. - Get the day before yesterday's closing stock price
