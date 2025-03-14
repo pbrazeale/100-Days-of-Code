@@ -20,7 +20,11 @@ stock_parameters = {
 
 alpha_response = requests.get(STOCK_ENDPOINT, params=stock_parameters)
 print(alpha_response.json())
-
+stock_data = alpha_response.json()["Time Series (Daily)"]
+stock_data_list = [value for (key, value) in stock_data.items()]
+yesterday_stock_data = stock_data_list[0]
+yesterday_closing_price = yesterday_stock_data["4. close"]
+print(yesterday_closing_price)
 
 # TODO 2. - Get the day before yesterday's closing stock price
 
