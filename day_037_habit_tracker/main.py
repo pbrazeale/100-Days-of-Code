@@ -40,12 +40,35 @@ graph_ids = {"Pages Read": "g01"}
 
 # Post Pixel
 # https://docs.pixe.la/entry/post-pixel
-today = datetime.today().strftime("%Y%m%d")
 # print(today)
-post_quantity = input("How many pages did you read?: ")
+post_put = input("'post' today's numbers or 'put' numbers manually?: ")
+if post_put == "post":
+    post_quantity = input("How many pages did you read?: ")
+    today = datetime.today().strftime("%Y%m%d")
 
-pixela_post_params = {"date": today, "quantity": post_quantity}
-pixela_post_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{graph_ids["Pages Read"]}"
-pixela_graph_post = requests.post(
-    url=pixela_post_endpoint, json=pixela_post_params, headers=pixela_headers
-)
+    pixela_post_params = {"date": today, "quantity": post_quantity}
+    pixela_post_endpoint = (
+        f"{pixela_endpoint}/{USERNAME}/graphs/{graph_ids["Pages Read"]}"
+    )
+    pixela_graph_post = requests.post(
+        url=pixela_post_endpoint, json=pixela_post_params, headers=pixela_headers
+    )
+    print(pixela_graph_post.text)
+
+# Put Pixel
+# https://docs.pixe.la/entry/put-pixel
+elif post_put == "put":
+    put_date = input("What date? 'YYYYMMDD': ")
+    put_quantiy = input("How many pages did you read?: ")
+
+    pixela_put_params = {"quantity": put_quantiy}
+    pixela_put_endpoint = (
+        f"{pixela_endpoint}/{USERNAME}/graphs/{graph_ids["Pages Read"]}/{put_date}"
+    )
+    pixela_graph_put = requests.post(
+        url=pixela_put_endpoint, json=pixela_put_params, headers=pixela_headers
+    )
+    print(pixela_graph_put.text)
+
+else:
+    print("incorrect input: 'post' or 'put'")
