@@ -35,14 +35,16 @@ print(difference)
 diff_percent = (difference / float(yesterday_closing_price)) * 100
 print(diff_percent)
 
-# TODO 5. - If TODO4 percentage is greater than 5 then print("Get News").
 
 ## STEP 2: https://newsapi.org/
 # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME.
-
-# TODO 6. - Instead of printing ("Get News"), use the News API to get articles related to the COMPANY_NAME.
-
-# TODO 7. - Use Python slice operator to create a list that contains the first 3 articles. Hint: https://stackoverflow.com/questions/509211/understanding-slice-notation
+if diff_percent > 3:
+    news_parameters = {
+        "apiKey": values.newskey,
+        "qInTitle": COMPANY_NAME,
+    }
+    news_response = requests.get(NEWS_ENDPOINT, params=news_parameters)
+    articles = news_response.json()["articles"]
 
 
 ## STEP 3: Use twilio.com/docs/sms/quickstart/python
