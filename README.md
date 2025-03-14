@@ -203,3 +203,11 @@ Skipped. Couldn't get OpenWeather's student API.
 Built an app that uses API calls to check stock prices compared across two days, and then "sends" a text with the top three recent news articles about that stock to your phone.
 
 *Had to skip the Twilio texting part, and instead prints to console.*
+
+### Day 037 Habit Tracker
+Built a habit tracker heatmap (similar to github's tracker) for page reads.
+
+However, I got this message when trying to build it out, *'Please retry this request. Your request for some APIs will be rejected 25% of the time because you are not a Pixela supporter.'* and was unable to get the put-pixel API to work at all. It never acknowledged my requests.
+
+Overall though, it was a great API to play with, and helped solidify my API knowledge. 
+
