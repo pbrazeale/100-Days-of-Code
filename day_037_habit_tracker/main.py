@@ -38,9 +38,12 @@ headers = {"X-USER-TOKEN": TOKEN}
 
 # Post Pixel
 # https://docs.pixe.la/entry/post-pixel
-
 today = datetime.today().strftime("%Y%m%d")
 # print(today)
+
+post_quantity = input("How many pages did you read?: ")
+
+pixela_post_params = {"date": today, "quantity": post_quantity}
 
 
 # pixela_graph_post = requests.post()
