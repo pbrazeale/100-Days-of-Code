@@ -10,4 +10,8 @@ pixela_user_params = {
     "notMinor": "yes",
 }
 
-response_user = requests.post(url=pixela_endpoint, json=pixela_user_params)
+# Setup user account
+# response_user = requests.post(url=pixela_endpoint, json=pixela_user_params)
+# print(response_user.text)
+
+# Create Graph
