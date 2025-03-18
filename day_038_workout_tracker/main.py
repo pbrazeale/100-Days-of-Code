@@ -27,3 +27,8 @@ parameters = {
     "height_cm": HEIGHT_CM,
     "age": AGE,
 }
+
+# NUTRITIONIX API Call
+nut_response = requests.post(NUT_ENDPOINT, json=parameters, headers=headers)
+nut_reults = nut_response.json()
+print(nut_reults)
