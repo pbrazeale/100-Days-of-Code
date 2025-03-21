@@ -211,3 +211,9 @@ However, I got this message when trying to build it out, *'Please retry this req
 
 Overall though, it was a great API to play with, and helped solidify my API knowledge. 
 
+### Day 038 Workout Tracker
+Built a CLI interface to track workouts.
+
+Nutritionix API processes the data and returns a JSON object, which is processed and passed into Sheety API and finally posted to the Google Sheet for tracking. Saving at least 2 minutes every time I log an exercise.
+
+Solved 99% on my own, missed the final API needed lowercase titles for the column fields. `-_-`
