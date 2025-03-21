@@ -52,7 +52,7 @@ sheety_date = now.strftime(f"%m/%d/%Y")
 sheety_time = now.strftime(f"%X")
 
 # Sheety API CALL
-sheety_headers = {"Authorization": f"Bearer {SHEETY_TOKEN}"}
+sheety_header = {"Authorization": f"Bearer {SHEETY_TOKEN}"}
 sheety_post_endpoint = (
     f"{SHEETY_ENDPOINT}/{SHEETY_USERNAME}/{SHEETY_PROJECT}/{SHEETY_SHEET1}"
 )
@@ -63,4 +63,6 @@ sheety_post_params = {
         "Calories": nut_calories,
     },
 }
-sheety_post = requests.post(url=sheety_post_endpoint, json=sheety_post_params, headers=)
+sheety_post = requests.post(
+    url=sheety_post_endpoint, json=sheety_post_params, headers=sheety_header
+)
