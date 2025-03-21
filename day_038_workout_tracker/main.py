@@ -40,6 +40,11 @@ nut_response = requests.post(NUT_ENDPOINT, json=parameters, headers=headers)
 nut_reults = nut_response.json()
 print(nut_reults)
 
+# DateTime
+now = dt.datetime.now()
+sheety_date = now.strftime(f"%m/%d/%Y")
+sheety_time = now.strftime(f"%X")
+
 # Sheety API CALL
 sheety_response = requests.get(
     f"{SHEETY_ENDPOINT}/{SHEETY_USERNAME}/{SHEETY_PROJECT}/{SHEETY_SHEET1}"
