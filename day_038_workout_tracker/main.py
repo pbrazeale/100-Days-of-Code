@@ -42,9 +42,10 @@ nut_response = requests.post(NUT_ENDPOINT, json=parameters, headers=headers)
 nut_reults = nut_response.json()
 # print(nut_reults)
 
-nut_exercise = nut_reults["exercises"](0)["name"]
-nut_duration = nut_reults["exercises"](0)["duration_min"]
-nut_calories = nut_reults["exercises"](0)["nf_calories"]
+nut_exercise = nut_reults["exercises"][0]["name"]
+nut_duration = nut_reults["exercises"][0]["duration_min"]
+nut_calories = nut_reults["exercises"][0]["nf_calories"]
+# print(f"{nut_exercise}\n{nut_duration}\n{nut_calories}")
 
 # DateTime
 now = dt.datetime.now()
@@ -58,6 +59,8 @@ sheety_post_endpoint = (
 )
 sheety_post_params = {
     f"{SHEETY_SHEET1}": {
+        "Date": sheety_date,
+        "Time": sheety_time,
         "Exercise": nut_exercise,
         "Duration": nut_duration,
         "Calories": nut_calories,
