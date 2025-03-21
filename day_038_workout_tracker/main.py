@@ -38,7 +38,7 @@ parameters = {
 # NUTRITIONIX API Call
 nut_response = requests.post(NUT_ENDPOINT, json=parameters, headers=headers)
 nut_reults = nut_response.json()
-print(nut_reults)
+# print(nut_reults)
 
 nut_exercise = nut_reults["exercises"](0)["name"]
 nut_duration = nut_reults["exercises"](0)["duration_min"]
@@ -49,8 +49,14 @@ now = dt.datetime.now()
 sheety_date = now.strftime(f"%m/%d/%Y")
 sheety_time = now.strftime(f"%X")
 
-# # Sheety API CALL
-# sheety_response = requests.post(
-#     f"{SHEETY_ENDPOINT}/{SHEETY_USERNAME}/{SHEETY_PROJECT}/{SHEETY_SHEET1}"
-# )
-# sheety_results = sheety_response.json()
+# Sheety API CALL
+sheety_post_endpoint = (
+    f"{SHEETY_ENDPOINT}/{SHEETY_USERNAME}/{SHEETY_PROJECT}/{SHEETY_SHEET1}"
+)
+sheety_post_params = {
+    f"{SHEETY_SHEET1}": {
+        "Exercise": nut_exercise,
+        "Duration": nut_duration,
+        "Calories": nut_calories,
+    },
+}
