@@ -59,13 +59,15 @@ sheety_post_endpoint = (
 )
 sheety_post_params = {
     f"{SHEETY_SHEET1}": {
-        "Date": sheety_date,
-        "Time": sheety_time,
-        "Exercise": nut_exercise,
-        "Duration": nut_duration,
-        "Calories": nut_calories,
+        "date": sheety_date,
+        "time": sheety_time,
+        "exercise": nut_exercise,
+        "duration": nut_duration,
+        "calories": nut_calories,
     },
 }
-sheety_post = requests.post(
+sheety_response = requests.post(
     url=sheety_post_endpoint, json=sheety_post_params, headers=sheety_header
 )
+
+print(sheety_response.text)
