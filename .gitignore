@@ -13,6 +13,6 @@ day_038_workout_tracker/nutritionix.py
 day_038_workout_tracker/personal_data.py
 day_038_workout_tracker/sheety.py
 day_038_workout_tracker/__pycache__/sheety.cpython-312.pyc
-day_039_flight_deal_finder/Vars/amadaus.py
-day_039_flight_deal_finder/Vars/sheety.py
-day_039_flight_deal_finder/Vars/__pycache__/amadaus.cpython-312.pyc
+day_039_flight_deal_finder/.env
+day_039_flight_deal_finder/__pycache__/data_manager.cpython-312.pyc
+day_039_flight_deal_finder/test.py

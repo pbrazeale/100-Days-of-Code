@@ -1,22 +1,16 @@
-from Vars import amadaus
-from day_038_workout_tracker import sheety
-import pprint
-import requests
+from data_manager import DataManager
 
 # This file will need to use the DataManager,FlightSearch, FlightData, NotificationManager classes to achieve the program requirements.
+data_manager = DataManager()
+sheet_data = data_manager.get_destination_data()
 
-# Sheety
-SHEETY_ENDPOINT = "https://api.sheety.co/"
-SHEETY_USERNAME = sheety.username
-SHEETY_PROJECT = "workoutTraining"
-SHEETY_SHEET1 = "sheet1"
-SHEETY_TOKEN = sheety.token
+if sheet_data[0]["iataCode"] == "":
+    from flight_search import FlightSearch
 
-sheety_header = {"Authorization": f"Bearer {SHEETY_TOKEN}"}
-sheety_endpoint = (
-    f"{SHEETY_ENDPOINT}/{SHEETY_USERNAME}/{SHEETY_PROJECT}/{SHEETY_SHEET1}"
-)
+    flight_search = FlightSearch()
+    for row in sheet_data:
+        row["iataCode"] = flight_search.get_destination_code(row["city"])
+    print(f"sheet_data:\n {sheet_data}")
 
-sheety_response = requests.get(url=sheety_endpoint, headers=sheety_header)
-
-pprint(sheety_response.json())
+    data_manager.destination_data = sheet_data
+    data_manager.update_destination_codes()
