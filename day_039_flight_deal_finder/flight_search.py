@@ -25,6 +25,12 @@ class FlightSearch:
             "include": "AIRPOTS",
         }
 
+        amadaus_response = requests.get(
+            url=IATA_ENDPOINT,
+            headers=headers,
+            params=amadaus_params,
+        )
+
         code = "TESTING"
         return code
 
