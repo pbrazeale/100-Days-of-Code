@@ -5,7 +5,7 @@ import datetime
 
 load_dotenv()
 
-IATA_ENDPOINT = "https://test.api.amadeus.com/v1/reference-data/locations"
+IATA_ENDPOINT = "https://test.api.amadeus.com/v1/reference-data/locations/cities"
 FLIGHT_ENDPOINT = "https://test.api.amadeus.com/v2/shopping/flight-offers"
 TOKEN_ENDPOINT = "https://test.api.amadeus.com/v1/security/oauth2/token"
 
@@ -22,7 +22,7 @@ class FlightSearch:
         amadaus_params = {
             "keyword": city_name,
             "max": "2",
-            "subTYpe": "AIRPOT",
+            "include": "AIRPORTS",
         }
 
         amadaus_response = requests.get(
