@@ -31,7 +31,18 @@ class FlightSearch:
             params=amadaus_params,
         )
 
-        code = "TESTING"
+        print(
+            f"Status code {amadaus_response.status_code}. Airport IATA: {amadaus_response.text}"
+        )
+        try:
+            code = amadaus_response.json()["data"][0]["iataCode"]
+        except IndexError:
+            print(f"IndexError: No airport code found for {city_name}.")
+            return "N/A"
+        except KeyError:
+            print(f"KeyError: No airport code found for {city_name}.")
+            return "Not Found"
+
         return code
 
     def _get_new_token(self):
