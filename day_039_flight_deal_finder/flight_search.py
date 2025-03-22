@@ -19,6 +19,11 @@ class FlightSearch:
 
     def get_destination_code(self, city_name):
         headers = {"Authorizaiton": f"Bearer {self._token}"}
+        amadaus_params = {
+            "keyword": city_name,
+            "max": "2",
+            "include": "AIRPOTS",
+        }
 
         code = "TESTING"
         return code
