@@ -25,7 +25,7 @@ class DataManager:
     def get_destination_data(self):
         sheety_response = requests.get(url=SHEETY_ENDPOINT, auth=self._authorization)
         data = sheety_response.json()
-        print(data)
+        # print(data)
         self.destination_data = data[SHEETY_SHEET1]
         return self.destination_data
 
