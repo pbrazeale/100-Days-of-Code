@@ -234,3 +234,6 @@ Basic review of HTML.
 
 ### Day 041 HTML 2
 Basic review of HTML.
+
+### Day 042 CSS
+Basic review of CSS.
