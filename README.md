@@ -228,3 +228,6 @@ Structured the application to use separation of logic:
 - flight_serach.py
 
 Skipped the notification portion because the SMS API is not longer free for students.
+
+### Day 040 HTML
+Basic review of HTML.
