@@ -237,3 +237,6 @@ Basic review of HTML.
 
 ### Day 042 CSS
 Basic review of CSS.
+
+### Day 042 CSS 2
+Basic review of CSS; learned `*` for slection all elments. 
