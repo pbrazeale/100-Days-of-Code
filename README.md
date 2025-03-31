@@ -218,7 +218,7 @@ Nutritionix API processes the data and returns a JSON object, which is processed
 
 Solved 99% on my own, missed the final API needed lowercase titles for the column fields. `-_-`
 
-### Day 039 Flight Deal Finder
+### Day 039 & 40 Flight Deal Finder
 Built a backend application that used Amadaus API to track flight prices, and Sheety API to log new lowest price options on google sheets acting as the database.
 
 Structured the application to use separation of logic:
@@ -229,14 +229,14 @@ Structured the application to use separation of logic:
 
 Skipped the notification portion because the SMS API is not longer free for students.
 
-### Day 040 HTML
+### Day 041 HTML
 Basic review of HTML.
 
-### Day 041 HTML 2
+### Day 042 HTML 2
 Basic review of HTML.
 
-### Day 042 CSS
+### Day 043 CSS
 Basic review of CSS.
 
-### Day 042 CSS 2
+### Day 044 CSS 2
 Basic review of CSS; learned `*` for slection all elments. 
