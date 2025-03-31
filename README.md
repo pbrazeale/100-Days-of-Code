@@ -231,3 +231,6 @@ Skipped the notification portion because the SMS API is not longer free for stud
 
 ### Day 040 HTML
 Basic review of HTML.
+
+### Day 041 HTML 2
+Basic review of HTML.
