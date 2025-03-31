@@ -217,3 +217,14 @@ Built a CLI interface to track workouts.
 Nutritionix API processes the data and returns a JSON object, which is processed and passed into Sheety API and finally posted to the Google Sheet for tracking. Saving at least 2 minutes every time I log an exercise.
 
 Solved 99% on my own, missed the final API needed lowercase titles for the column fields. `-_-`
+
+### Day 039 Flight Deal Finder
+Built a backend application that used Amadaus API to track flight prices, and Sheety API to log new lowest price options on google sheets acting as the database.
+
+Structured the application to use separation of logic:
+- main.py
+- datamanager.py
+- flight_data.py
+- flight_serach.py
+
+Skipped the notification portion because the SMS API is not longer free for students.
