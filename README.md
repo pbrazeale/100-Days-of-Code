@@ -239,4 +239,7 @@ Basic review of HTML.
 Basic review of CSS; learned `*` for selecting all elements. 
 
 ### Day 044 CSS 2
-Basic review of CSS
+Built test "websites" and a meme page.
+- Learned how to use/embed google fonts via links.
+- Learned how to use margin as a means to shift divs where I need them on the screen.
+- Learned about `text-transform:`
