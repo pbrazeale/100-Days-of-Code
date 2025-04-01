@@ -4,7 +4,9 @@
 
 from bs4 import BeautifulSoup
 
-with open("website.html", "r") as webstie:
+with open("website.html") as webstie:
     website_contents = webstie.read()
 
 soup = BeautifulSoup(website_contents, "html.parser")
+
+print(soup.title)
